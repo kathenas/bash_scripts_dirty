@@ -18,6 +18,14 @@ then
 fi
 
 #
+# Information.
+#
+# The gnome screencast recorder often produces video with poor colouring. The settings below can
+# be manipulated to produce a better final production mp4 file for future use, be that on your
+# website or social media etc.
+#
+
+#
 # Settings for the conversion. Edit as required.
 #
 set_gamma=1.0
