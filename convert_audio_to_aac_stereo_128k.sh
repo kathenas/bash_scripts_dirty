@@ -20,7 +20,8 @@ fi
 #
 # Convert mp4 file audio to stereo (2 channel) aac.
 #
-for in_filename in *.[mM][pP][4]; do
+for in_filename in *.[mM][pP][4]
+do
     ffmpeg -i "$in_filename" -codec copy -c:a aac -ac 2 "_${in_filename%.*}.mp4"
     # Remove original input file.
     rm -f "${in_filename%.*}.mp4"

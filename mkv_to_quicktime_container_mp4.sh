@@ -20,6 +20,7 @@ fi
 #
 # Convert matroska container (mkv) video files to quicktime container mp4. 
 #
-for in_filename in *.[mM][kK][vV]; do
+for in_filename in *.[mM][kK][vV]
+do
     ffmpeg -i "$in_filename" -codec copy "${in_filename%.*}.mp4"
 done
