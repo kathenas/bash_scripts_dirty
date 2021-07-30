@@ -32,6 +32,7 @@ set_gamma=1.0
 set_contrast=1.0
 set_brightness=0.0
 set_saturation=1.25
+set_bitrate=2000
 
 #
 # Convert gnome internal screencast encoder vp9 webm file to vp9 with colour enhancement.
@@ -40,7 +41,7 @@ for in_filename in *.[wW][eE][bB][mM]
 do
     ffmpeg -i "$in_filename" \
         -vf eq=gamma="$set_gamma":contrast="$set_contrast":brightness="$set_brightness":saturation="$set_saturation" \
-        -codec:v libvpx-vp9 -b:v 2000k \
+        -codec:v libvpx-vp9 -b:v "$set_bitrate"k \
         _"${in_filename%.*}.webm"
     # Remove original input file.
     rm -f "${in_filename%.*}.webm"
