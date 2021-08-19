@@ -9,7 +9,7 @@
 #
 # Check we have mpg123 installed and available for use.
 #
-if ! command -v mpg123 &> /dev/null
+if ! [ -x "$(command -v mpg123)" ]
 then
     echo "mpg123 could not be found."
     echo "Please check you have mpg123 installed on your system."
