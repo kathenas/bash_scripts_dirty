@@ -9,7 +9,7 @@
 #
 # Check we have ffmpeg installed and available for use.
 #
-if ! command -v ffmpeg &> /dev/null
+if ! [ -x "$(command -v ffmpeg)" ]
 then
     echo "ffmpeg could not be found."
     echo "Please check you have ffmpeg installed on your system."
