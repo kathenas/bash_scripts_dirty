@@ -41,6 +41,7 @@ done
 # Settings for the conversion. Edit as required.
 #
 set_bitrate=160
+set_sample_rate=44100
 
 #
 # Convert audio file (wav) to ogg vorbis (ogg). 
@@ -48,7 +49,7 @@ set_bitrate=160
 for in_filename in *.[wW][aA][vV]
 do
     # Set Variable Bit Rate (VBR) to 'set_bitrate' kbps target bitrate.
-    oggenc "$in_filename" -b "$set_bitrate" -o "${in_filename%.*}.ogg"
+    oggenc "$in_filename" --resample "$set_sample_rate" -b "$set_bitrate" -o "${in_filename%.*}.ogg"
 done
 
 #
