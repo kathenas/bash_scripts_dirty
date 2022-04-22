@@ -28,10 +28,10 @@ fi
 #
 # Settings for the conversion. Edit as required.
 #
-set_gamma=1.0
-set_contrast=1.0
-set_brightness=0.0
-set_saturation=1.25
+set_gamma=1.00
+set_contrast=1.00
+set_brightness=0.00
+set_saturation=1.20
 
 #
 # Convert gnome internal screencast encoder vp9 webm file to mp4.
